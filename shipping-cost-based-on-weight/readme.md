@@ -2,7 +2,7 @@
 
 This code snippet implements a custom flat rate shipping method for WooCommerce, allowing for flexible shipping cost calculation based on destination and weight.
 
-## Setu
+## How to setup?
 
 1. Copy the provided code into your WordPress theme's `functions.php` file or create a new plugin file.
 2. Ensure WooCommerce is installed and activated on your WordPress site.
