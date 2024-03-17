@@ -20,7 +20,7 @@ This PHP function is designed to replace the default `<h2>` tag containing the p
 ## Example:
 
 ```php
-// Function to replace post title <h2> with <h1>
+// Function to replace post title <h2> with <h1> and add 'entry-title' class
 function replace_post_title_h2_with_h1($content) {
     // Check if we're on a single post page
     if (is_single()) {
@@ -28,12 +28,13 @@ function replace_post_title_h2_with_h1($content) {
         $post_title = get_the_title();
 
         // Replace <h2> tags with class 'entry-title' with the post title
-        $content = preg_replace('/<h2\s+class="entry-title">(.*?)<\/h2>/', '<h1>' . $post_title . '</h1>', $content, 1); // Replace only the first occurrence
+        $content = preg_replace('/<h2\s+class="entry-title">(.*?)<\/h2>/', '<h1 class="entry-title">' . $post_title . '</h1>', $content, 1); // Replace only the first occurrence
     }
     return $content;
 }
 // Add filter hook to execute the function
 add_filter('the_content', 'replace_post_title_h2_with_h1');
+
 ```
 
 # Note:
